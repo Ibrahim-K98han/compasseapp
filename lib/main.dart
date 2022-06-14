@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_compass/flutter_compass.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,9 +23,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //first of all let's set the compass for the app
+  double? heading;
+
+  @override
+  void initState(){
+    super.initState();
+    FlutterCompass.events!.listen((event) {setState((){
+      heading = event.heading;
+    });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+
+    );
   }
 }
 
