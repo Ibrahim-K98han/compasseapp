@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Text("Compass App"),
+        title: Text("Compass Apps"),
       ),
     );
   }
