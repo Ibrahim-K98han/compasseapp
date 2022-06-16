@@ -61,10 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: EdgeInsets.all(18.0),
             child: Stack(
+              alignment: Alignment.center,
               children: [
                   Image.asset("asset/cadrant.png"),
                   Transform.rotate(angle: ((heading ?? 0) + (pi/180) * -1),
-                  child: Image.asset("asset/compass.png"),
+                  child: Image.asset("asset/compass.png",
+                  scale: 1.1,
+                  ),
                   ),
               ],
             ),
