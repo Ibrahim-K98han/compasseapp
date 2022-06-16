@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey.shade900,
         centerTitle: true,
         title: Text("Compass Apps"),
       ),
