@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 
@@ -24,7 +26,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   //first of all let's set the compass for the app
-  double? heading;
+  double? heading = 0;
 
   @override
   void initState(){
@@ -48,10 +50,24 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("${heading!.ceil()}",
+          Text("${heading!.ceil()}\u2109",
             style: TextStyle(color: Colors.white,
                 fontSize: 26.0,
                 fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 50.0,
+          ),
+          Padding(
+            padding: EdgeInsets.all(18.0),
+            child: Stack(
+              children: [
+                  Image.asset("asset/cadrant.png"),
+                  Transform.rotate(angle: ((heading ?? 0) + (pi/180) * -1),
+                  child: Image.asset("asset/compass.png"),
+                  ),
+              ],
+            ),
           )
         ],
       ),
