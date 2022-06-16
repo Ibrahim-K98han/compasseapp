@@ -44,6 +44,17 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         title: Text("Compass Apps"),
       ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("${heading!.ceil()}",
+            style: TextStyle(color: Colors.white,
+                fontSize: 26.0,
+                fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }
